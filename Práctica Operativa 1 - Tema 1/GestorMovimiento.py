@@ -18,9 +18,8 @@ class GestorMov:
         if self.__cantidad == self.__dimension:
             self.__dimension += self.__incremento
             self.__listaMov.resize(self.__dimension)
-        else:
-            self.__listaMov[self.__cantidad] = nuevoMov
-            self.__cantidad += 1
+        self.__listaMov[self.__cantidad] = nuevoMov
+        self.__cantidad += 1
 
     def leerdatos(self):
         archivo = open('MovimientosAbril2024.csv')
